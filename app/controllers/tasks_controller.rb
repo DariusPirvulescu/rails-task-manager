@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :find_task, only: [:show, :edit, :destroy]
-  before_action :new_task_with_params, only: [:create, :update]
+  before_action :find_task, only: [:show, :edit, :update, :destroy]
+  before_action :new_task_with_params, only: [:create]
   def index
     @tasks = Task.all
   end
@@ -20,7 +20,7 @@ class TasksController < ApplicationController
   def edit; end
 
   def update
-    @task.save
+    @task.update(task_params)
 
     redirect_to tasks_path
   end
@@ -42,6 +42,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
