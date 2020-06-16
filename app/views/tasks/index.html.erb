@@ -1,6 +1,7 @@
 <div>
   <%@tasks.each do |task|%>
-    <div><h3><%= link_to task.title , task_path(task) %></h3></div>
+    <div><p><b><%= link_to task.title , task_path(task) %></b>
+      --- <%= link_to "edit", task_path(task.id) %></div></p>
   <% end %>
 </div>
 
