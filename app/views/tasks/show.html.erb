@@ -1,13 +1,39 @@
-<div>
-  <h2><%= @task.title %> </h2>
-  <p><%= @task.details %> </p>
-  <br>
-  <%= link_to "edit task", edit_task_path(@task) %>
-  <br><br>
-  <%= link_to "Delete this task",
-    task_path(@task),
-    method: :delete,
-    data: { confirm: "Are you sure?" } %>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div>
+        <div>
+          <h2><%= @task.title %> </h2>
+          <div class="details">
+            <p><%= @task.details %> </p>
+          </div>
 
-<%= link_to "back to all tasks", tasks_path %>
+          <br>
+
+          <% if @task.completed %>
+            <i class="fas fa-check"></i> <p>This task is completed</p>
+          <% else %>
+            <p>This task is not completed</p>
+          <% end %>
+        </div>
+
+        <hr>
+        <br>
+
+        <div>
+          <%= link_to "Edit task", edit_task_path(@task), class: "btn btn-primary" %>
+
+          <br><br>
+
+          <%= link_to "Delete this task",
+            task_path(@task),
+            class: "btn btn-danger",
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+      <br>
+      <%= link_to "Back to all tasks", tasks_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

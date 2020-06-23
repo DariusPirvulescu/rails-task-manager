@@ -1,3 +1,26 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+p {
+  display: inline-block;
+  font-size: 20px;
+}
+
+i {
+  font-size: 15px;
+  margin-left: 5px;
+}
+.strikeout {
+  text-decoration: line-through;
+  text-decoration-color: blue;
+}
+
+.details {
+  background-color: lightgray;
+  box-shadow: 0 0 2px black;
+  height: 60px;
+}
+
+.container {
+  margin-top: 20px;
+}

@@ -1,4 +1,7 @@
 @import "bootstrap/scss/bootstrap";
+@import "tasks";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,3 +17,4 @@
  *= require_tree .
  *= require_self
  */
+

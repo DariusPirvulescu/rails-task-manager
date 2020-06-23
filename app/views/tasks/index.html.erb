@@ -1,7 +1,25 @@
-<div>
-  <%@tasks.each do |task|%>
-    <div><h3><b><%= link_to task.title , task_path(task) %></b></h3></div>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>My tasks</h1>
+      <div>
+        <%@tasks.each do |task|%>
+          <div>
+            <% if task.completed %>
+              <p class="strikeout"><b><%= link_to task.title , task_path(task) %></b></p>
+            <% else %>
+              <p><b><%= link_to task.title , task_path(task) %></b></p>
+            <% end %>
+            <%= link_to(task_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure?" }) do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <%= link_to "create new task", new_task_path, class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>
 
-<%= link_to "create new task", tasks_new_path %>
