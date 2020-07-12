@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   def create
     @task.save
 
-    redirect_to tasks_path
+    redirect_to root_path
   end
 
   def edit; end
@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
 
-    redirect_to tasks_path
+    redirect_to root_path
   end
 
   private
