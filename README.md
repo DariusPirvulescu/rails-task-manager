@@ -1,24 +1,23 @@
-# README
+## Task-manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails task manager application. 
+Basic app I built while learning Rails.
 
-Things you may want to cover:
+Allows users to perform CRUD actions on the tasks database and organize their tasks.
 
-* Ruby version
+------------
+[Task-Manager Online](https://task-manager-1234.herokuapp.com/ "CTRL + click to open in new tab")
 
-* System dependencies
+### Built with:
 
-* Configuration
+- Ruby on Rails
+- Bootstrap
+- simple_form gem
+- font-awesome-sass gemm
 
-* Database creation
+**Database**:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Development:
+ - - SQLite
+ - Production:
+ - - PostgreSQL
