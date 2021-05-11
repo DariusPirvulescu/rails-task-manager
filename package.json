@@ -7,7 +7,7 @@
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.5.0",
     "elliptic": "^6.5.3",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
